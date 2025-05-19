@@ -1,0 +1,285 @@
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+}
+
+/* Section Layout */
+section {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Headings */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.highlight {
+  background-color: #ffcc00;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #000;
+}
+
+/* Profile Carousel - Born Today */
+.profile-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.profile-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.profile-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* News Grid - Top News */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.news-filters {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.news-filters button {
+  padding: 8px 14px;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.news-filters button:hover {
+  background-color: #666;
+}
+
+/* Trailer Carousel - Coming Soon */
+.trailer-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.trailer-item {
+  background-color: #222;
+  border-radius: 8px;
+  min-width: 300px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.trailer-item img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.trailer-info {
+  padding: 10px;
+}
+
+.trailer-info h3 {
+  margin: 10px 0 5px;
+}
+
+.trailer-info a {
+  display: inline-block;
+  color: #f5c518;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.trailer-info a:hover {
+  text-decoration: underline;
+}
+
+/* Explore Carousel - More to Explore */
+.explore-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.explore-item img {
+  width: 120px;
+  height: 170px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.more-to-explore a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f5c518;
+  text-decoration: none;
+}
+
+.more-to-explore a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-carousel,
+  .trailer-carousel,
+  .explore-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-item,
+  .trailer-item,
+  .explore-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* IMDb-style Footer */
+.imdb-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.recently-viewed h3 {
+  font-size: 22px;
+}
+
+.recently-viewed p {
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.sign-in-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f5c518;
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sign-in-btn:hover {
+  background-color: #e5b300;
+}
+
+.footer-panels {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.footer-box h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.social-icons a img {
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.qr-code {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  object-fit: contain;
+}
+
+.footer-links {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-branding {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
+
+.amazon {
+  font-weight: bold;
+  text-transform: lowercase;
+}
